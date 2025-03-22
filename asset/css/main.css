@@ -460,6 +460,9 @@ section .news-card .text h3 a {
     display: block;
     color: #191919;
 }
+section .news-card .text h3 a:hover {
+    color: #1E266D;
+}
 section .news-card .meta-info {
     border-top: 1px solid rgba(88, 86, 233, 0.2);
     color: #E2E2FB;
