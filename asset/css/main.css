@@ -2,6 +2,7 @@
 font-family: 'Lato', sans-serif;
 font-family: 'Montserrat', sans-serif;
 */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 .master,
 header,
@@ -9,14 +10,11 @@ section,
 footer,
 figure,
 h1,h2,h3,h4,h5,h6{
-    width: 100%;
-    float: left;
     position: relative;
 }
-
-p{
-    width: 100%;
-    float: left;
+a:hover, 
+a:focus {
+    text-decoration: none;
 }
 
 section{
@@ -52,24 +50,222 @@ figure img{
     height: 100%;
 }
 
-.section-title{
-    width: 100%;
-    float: left;
-    margin-bottom: 40px;
-}
-
-.btn{
-    min-width: 120px;
-    padding: 15px 30px;
+body {
+    font-family: 'Lato', sans-serif;
     font-size: 14px;
+    overflow-x: hidden;
+    position: relative;
 }
-.btn-primary{
-    background: #026B33;
-    color: #fff;
-    border: none;
+.btn{
+    padding: 15px 30px;
+    font-size: 16px;
 }
-.btn-secondary{
-    background: none;
-    border: 2px solid #026B33;
-    color: #026B33;
+.btn.btn-icon i {
+    margin-left: 5px;
+    font-size: 15px;
 }
+.btn.btn-primary {
+    background-color: #5956E9;
+    color: #ffffff;
+    padding: 15px 30px;
+}
+.btn.btn-primary:hover, 
+.btn.btn-primary:focus {
+    color: #ffffff;
+    background-color: #4240bd;
+}
+.btn.btn-outline-white {
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+/* --- HEADER --- */
+header {
+    padding: 10px 15px;
+}
+header .logo img {
+    max-width: 120px;
+}
+header .main-menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 0;
+}
+header .main-menu li {
+    padding: 0 15px;
+}
+header .main-menu li a {
+    display: block;
+    padding: 0 3px;
+    line-height: 1.2em;
+    color: #182560;
+    font-weight: 700;
+    font-size: 16px;
+    border-bottom: 1px solid transparent;
+}
+header .main-menu li a:hover,
+header .main-menu li.active a {
+    color: #5956E9;
+    border-bottom: 1px solid #5956E9;
+}
+header .burger-bt {
+    font-size: 25px;
+    color: #182560;
+    float: right;
+    padding: 0 15px;
+    display: none;
+}
+/* --- END:: HEADER --- */
+/* --- HERO SECTION --- */
+section.hero {
+    background-image: url(../images/hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px 0;
+}
+section.hero .hero-text h1 {
+    color: #ffffff;
+    font-family: 'Lato', sans-serif;
+    font-size: 55px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+section.hero .hero-play {
+    width: 60px;
+    margin-bottom: 20px;
+}
+section.hero .hero-text p {
+    font-size: 18px;
+    line-height: 1.8em;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+section.hero .hero-img {
+    max-width: 85%;
+    width: 100%;
+    display: table;
+    margin-left: auto;
+}
+/* --- END:: HERO SECTION --- */
+/* --- SECTION --- */
+section p {
+    font-size: 16px;
+    color: #666666;
+    line-height: 1.8em;
+    margin-bottom: 20px;
+}
+section .section-title  {
+    margin-bottom: 30px;
+}
+section .section-title h4 {
+    color: #5956E9;
+    position: relative;
+    font-size: 16px;
+    padding: 5px 45px;
+    display: table;
+    width: auto;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+section .section-title h4::after,
+section .section-title h4::before {
+    position: absolute;
+    height: 2px;
+    background-color: #5956E9;
+    width: 30px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    content: "";
+}
+section .section-title h4::before {
+    left: auto;
+    right: 0;
+}
+section .section-title h4.line-left::before {
+    display: none;
+}
+section .section-title h3 {
+    font-size: 50px;
+    color: #000;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+section .highlight-text {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #5956E9;
+}
+section.tentang .img-tentang-kami {
+    max-width: 90%;
+    width: 100%;
+}
+section.tentang .tentang-kami-card {
+    margin-top: 40px;
+}
+section.tentang .outline-card {
+    border: 1px solid #ececec;
+    border-radius: 5px;
+    padding: 20px 30px;
+    height: 170px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+section.tentang .outline-card img {
+    width: 60px;
+    margin: 0 auto 10px auto;
+}
+section.tentang .tentang-kami-card h5 {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 0;
+}
+section.pendekatan {
+    background-color: #FAFAFC;
+}
+section.pendekatan .img-pendekatan {
+    position: relative;
+    padding-left: 30px;
+}
+section.pendekatan .img-pendekatan .main-img {
+    position: relative;
+    z-index: 2;
+    max-width: 420px;
+    width: 100%;
+}
+section.pendekatan .img-pendekatan .vector {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: -70px;
+    z-index: 0;
+}
+/* --- END:: SECTION --- */
+/* --- RESPONSIVE --- */
+/* tablet */
+@media (max-width: 1024px) and (min-width: 768px) {
+   
+}
+@media (max-width: 1024px) {
+    section.hero .hero-text h1 {
+        font-size: 40px;
+    }
+    section .section-title h3 {
+        font-size: 35px;
+    }
+    section.tentang .tentang-kami-card {
+        margin-top: 25px;
+    }
+    section.tentang .outline-card {
+        height: auto;
+        padding: 15px;
+    }
+    section.tentang .tentang-kami-card h5 {
+        font-size: 16px;
+    }
+}
+/* --- END:: RESPONSIVE --- */
