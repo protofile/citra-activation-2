@@ -68,6 +68,7 @@ body.mobile-menu-visible {
 }
 body .master {
     overflow-x: hidden !important;
+    overflow-y: hidden !important;
 }
 
 .btn {
