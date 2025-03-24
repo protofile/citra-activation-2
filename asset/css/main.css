@@ -66,6 +66,9 @@ body {
 body.mobile-menu-visible {
     overflow: hidden !important;
 }
+body .master {
+    overflow-x: hidden !important;
+}
 
 .btn {
     padding: 15px 30px;
@@ -131,21 +134,21 @@ header {
 header .logo img {
     max-width: 120px;
 }
-header .menu-area .navbar-collapse {
+.menu-area .navbar-collapse {
     justify-content: flex-end;
 }
-header .main-menu .navigation {
+.main-menu .navigation {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     margin-bottom: 0;
 }
 
-header .main-menu .navigation li {
+.main-menu .navigation li {
     padding: 0 15px;
 }
 
-header .main-menu .navigation li a {
+.main-menu .navigation li a {
     display: block;
     padding: 0 3px;
     line-height: 1.2em;
@@ -154,17 +157,17 @@ header .main-menu .navigation li a {
     font-size: 16px;
 }
 
-header .main-menu .navigation li a:hover,
-header .main-menu .navigation li.active a {
+.main-menu .navigation li a:hover,
+.main-menu .navigation li.active a {
     color: #5956E9;
 }
 
-header .main-menu .navigation li a.btn {
+.main-menu .navigation li a.btn {
     color: #ffffff;
     padding: 15px 30px;
 }
 
-header .menu-area .mobile-nav-toggler {
+.menu-area .mobile-nav-toggler {
     position: relative;
     font-size: 40px;
     height: 62px;
@@ -175,7 +178,7 @@ header .menu-area .mobile-nav-toggler {
     align-items: flex-end;
 }
 
-header .menu-area .mobile-nav-toggler .icon-bar {
+.menu-area .mobile-nav-toggler .icon-bar {
     position: relative;
     height: 2px;
     width: 30px;
@@ -187,6 +190,52 @@ header .menu-area .mobile-nav-toggler .icon-bar {
     -ms-transition: all 300ms ease;
     -o-transition: all 300ms ease;
     transition: all 300ms ease;
+}
+.sticky-header {
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    background: #fff;
+    left: 0px;
+    top: 0px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    z-index: 0;
+    padding: 8px 15px;
+    transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -webkit-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+}
+.sticky-header .logo img {
+    max-width: 100px;
+}
+  
+.fixed-header .sticky-header {
+    z-index: 99999;
+    opacity: 1;
+    visibility: visible;
+    -ms-animation-name: fadeInDown;
+    -moz-animation-name: fadeInDown;
+    -op-animation-name: fadeInDown;
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+    -ms-animation-duration: 500ms;
+    -moz-animation-duration: 500ms;
+    -op-animation-duration: 500ms;
+    -webkit-animation-duration: 500ms;
+    animation-duration: 500ms;
+    -ms-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    -op-animation-timing-function: linear;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -ms-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    -op-animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
 }
 
 /* --- END:: HEADER --- */
@@ -856,11 +905,11 @@ footer .footer-cr {
 }
 
 @media (max-width: 1024px) {
-    header .menu-area .main-menu {
+    .menu-area .main-menu {
         display: none;
     }
 
-    header .menu-area .mobile-nav-toggler {
+    .menu-area .mobile-nav-toggler {
         display: flex;
     }
 

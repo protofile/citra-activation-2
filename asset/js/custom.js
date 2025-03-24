@@ -10,6 +10,7 @@ $(document).ready(function() {
 
 		var mobileMenuContent = $('header .menu-area .main-menu').html();
 		$('.mobile-menu .menu-box .menu-outer').append(mobileMenuContent);
+		$('.sticky-header .main-menu').append(mobileMenuContent);
 
 		//Menu Toggle Btn
 		$('.mobile-menu .menu-backdrop, .mobile-menu .close-btn').on('click', function () {
@@ -25,6 +26,21 @@ $(document).ready(function() {
 		}, 1000);
 	  }
 	$('.navigation li a').on('click', scrollToSection);
+
+	//Update Header Style and Scroll to Top
+	function headerStyle() {
+		if ($('header').length) {
+			var windowpos = $(window).scrollTop();
+			var siteHeader = $('header');
+			if (windowpos >= 90) {
+				siteHeader.addClass('fixed-header');
+			} else {
+				siteHeader.removeClass('fixed-header');
+			}
+		}
+	}
+
+	headerStyle();
 
 	$('.client-slider').owlCarousel({
 		loop:true,
@@ -47,5 +63,13 @@ $(document).ready(function() {
 	$('.owl-carousel').find('.owl-nav').removeClass('disabled');
 	$('.owl-carousel').on('changed.owl.carousel', function(event) {
 		$(this).find('.owl-nav').removeClass('disabled');
+	});
+
+	/* ==========================================================================
+   		When document is Scrollig, do
+   	========================================================================== */
+
+	$(window).on('scroll', function () {
+		headerStyle();
 	});
 });
